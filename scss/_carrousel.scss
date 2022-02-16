@@ -1,0 +1,72 @@
+// $width-c-item: 150px;
+.carrousel {
+  min-width: 100%;
+  display: flex;
+  padding: 0 1rem;
+  // background: salmon;
+  align-items: center;
+  justify-content: space-between;
+  // position: absolute;
+  flex-wrap: nowrap;
+
+  &-card-container {
+    display: inherit;
+    // display: initial;
+    // width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+    // background: rgba(8, 27, 192, 0.5);
+  }
+
+  &-item {
+    // display: inline-block;
+    margin: auto 20px;
+    min-height: 100px;
+    min-width: calc(100px * 1.618);
+    // background: rgba(41, 163, 16, 0.7);
+    background: $white;
+    transition: all 2s ease;
+    border: .5px solid $base-color;
+    border-radius: 5px;
+
+    &-title {
+      text-align: center;
+    }
+  }
+
+  &-arrow {
+    flex: 0 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: blue;
+    background-color: $base-color;
+    border-radius: 50%;
+  }
+
+}
+
+.arrow-left {
+  margin-right: 1rem;
+}
+.arrow-right {
+  margin-left: 1rem;
+}
+
+
+@media screen and (min-width: $responsive-size) {
+  // $width-c-item: 200px;
+  .carrousel {
+    padding: 0 5rem;
+
+    &-item {
+      margin: auto 40px;
+      min-height: 200px;
+      min-width: calc(200px * 1.618);
+    }
+  }
+}

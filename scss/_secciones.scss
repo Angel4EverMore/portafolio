@@ -1,0 +1,154 @@
+// PARALLAX
+.parallax-container{
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: calc(100vw * .75);
+  .bg-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .bg {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100vw calc(100vw * .75);
+      background-position: left top;
+      background-repeat: no-repeat;
+      transform: translateZ(0);
+      will-change: transform;
+      z-index: -1;
+    }
+  }
+  @media screen and (min-width: $responsive-size) {
+    height: calc(100vw * .75);
+    .bg-wrap .bg {
+      background-size: 100vw calc(100vw * .75);
+      // background-position: center left;
+      background-position: top center;
+    }
+  }
+}
+
+
+
+
+// SECCIONES
+.section {
+  display: flex;
+  flex-direction: column;
+  background: $base-color;
+  min-height: 100vh;
+
+  &-content-title {
+    color: $highlight-color;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 2rem 0;
+    @media screen and (min-width: $responsive-size) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+
+  }
+
+  &-content {
+    padding: 1.5rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $responsive-size) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+
+    &-text {
+      text-align: justify;
+      @media screen and (min-width: $responsive-size) {
+        margin-left: 2rem;
+      }
+    }
+
+    &-img {
+      display: none;
+      @media screen and (min-width: $responsive-size) {
+        display: inline-block;
+        width: 150px;
+        height: auto;
+        flex: 1 1;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+.subtitle-banner{
+  position: relative;
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100px;
+  padding-right: 2rem;
+  
+  color: darken($text-secondary-color, 15%);
+  text-align: right;
+  font-family: LemonMilk;
+  font-size: 2rem;
+  font-weight: $light;
+  background-attachment: fixed;
+  background: linear-gradient(45deg, #808080, white);
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(-45deg, transparent 47%, rgba(#000, .6) 47%, transparent 53%) 0px 0px;
+    background: -webkit-linear-gradient(-45deg, transparent 47%, rgba(#000, .6) 47%, transparent 53%) 0px 0px;
+    background: -ms-linear-gradient(-45deg, transparent 47%, rgba(#000, .6) 47%, transparent 53%) 0px 0px;
+    background: -moz-linear-gradient(-45deg, transparent 47%, rgba(#000, .6) 47%, transparent 53%) 0px 0px;
+    background: -o-linear-gradient(-45deg, transparent 47%, rgba(#000, .6) 47%, transparent 53%) 0px 0px;
+    background-size: 10px 10px;
+  }
+
+  @media screen and (min-width: $responsive-size) {
+    height: 200px;
+    font-size: 3rem;
+    padding-right: 5rem;
+
+    &:after{
+      height: 200px;
+    }
+  }
+}
+
+
+.inicio {  
+  background-image: url(../img/me-nor.jpg);
+
+  @media screen and (min-width: 1000px) {
+      background-position: center center !important;
+  }
+}
+
+// .acerca {
+//   background-image: url(../img/me-col.jpg);
+
+//   @media screen and (max-width: $responsive-size){
+//       // background-image: url(../img/me-col.jpg);
+//       background-size: 100% 100vh;
+//       background-position: center center;
+//   }
+// }

@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+@font-face{
+   font-family: "LemonMilk";
+   font-style: normal;
+   font-weight: normal;
+   src: url("../font/LemonMilk.otf") format('opentype');   
+}
+// Variables para aplicarlas en font-weight
+  $light      : 300;
+  $normal     : 400;
+  $semi-bold  : 600;
+  $bold       : 700;
+  $extra-bold : 800;
+
+// Paleta de color
+  $white : #fff;              // Blanco puro  
+  $base-color: #f5f5f5;       // Gris claro
+  $secondary-color: #323232;  // Gris Oxford
+  
+  $text-base-color: #555;      //Gris Oxford
+  // $text-base-color: #323232;      //Gris Oxford
+  $text-secondary-color: #c8c8c8; //Gris claro
+  $highlight-color: #00aee5;      //Azul 4e+
+
+// Breakpoints
+  $responsive-size: 800px;
+
+// Estilos base
+  @import "base";
+  @import "loader";
+  @import "header";
+  // @import "inicio";
+  @import "secciones";
+  @import "cards";
+  @import "carrousel";
+  @import "footer";
