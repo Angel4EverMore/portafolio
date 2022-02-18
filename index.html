@@ -2,36 +2,51 @@
 <html lang="es-MX">
 
   <head>
-
-    <title>José Ángel Lemus | Portfolio </title>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Metadatos básicos -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <meta name="content" description="Portfolio de José Ángel Lemus (creado y diseñado por mí mismo. Te gusta lo que ves, sería un gusto trabajar contigo."/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <!--Metadatos para posicionamiento en buscadores-->
     <meta author="José Ángel Lemus Luna | 4EverMore"/>
+    <meta name="content" description="Portfolio de José Ángel Lemus. Te gusta lo que ves, sería un gusto trabajar contigo."/>
+    <meta name="keywords" content="Diseño programacion web portafolio Jose Angel PHP HTML CSS Javascript CRM ERP landing pages">
+    <link rel="manifest" href="../manifest.webmanifest">
 
 
     <!-- Iconos para página web y dispositivos móviles -->
-     
     <meta name="msapplication-TileImage" content="./img/4evermore-logo-app.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
     <link rel="shortcut icon" href="./img/4evermore-ico.ico" type="image/x-icon" /> <!--icono en pestaña-->
     <link rel="apple-touch-icon-precomposed" href="./img/4evermore-logo-app.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/4evermore-logo-app.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/4evermore-logo-app.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/4evermore-logo-app.png" />
+
+
+    <!-- Metadatos para redes sociales og -->
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="José Ángel | Portafolio | Diseño Web" />
+    <meta property="og:description" content="Brindar soluciones de calidad, mediante el diseño, capacidad y compromiso." />
+    <!-- <meta property="og:url" content="https://angel4evermore.github.io/portafolio/" /> -->
+    <meta property="og:url" content="https://n9.cl/4evermore" />
+    <meta property="og:site_name" content="Github" />	
+    <meta property="og:image" content="https://angel4evermore.github.io/portafolio/img/fullnes-square.jpg" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta name="twitter:card" content="summary_large_image" />
   
 
     <!-- Enlaces CSS -->
     <link rel="stylesheet" media="all" href="./css/styles.css"/>
 
 
-    <!-- <script src="./librerias/jquery/jquery.min.js"></script> -->
-             
+    <title>José Ángel Lemus | Portfolio </title>
   </head>
 
-  <body>
+  <body data-dark>
     <!-- LOADER -->
     <div class="loading-page" id="loader">
       <ul class="loading-list">
@@ -49,28 +64,53 @@
 
     <!-- HEADER -->
     <header class="main-header">
-        <div class="copy-container">
-            <a href="#inicio" class="enlace"><img src="./img/4evermore-logo.png" alt="logo de 4EverMore" title="Ve al inicio"></a>
-        </div>
-        <input type="checkbox" id="toggle-button" class="toggle-button">
-        <label for="toggle-button"></label>
+      <!-- Logo para movil -->
+      <div class="copy-container mobile-visible header-item">
+          <a href="#inicio" class="enlace"><img src="./img/4evermore-logo.png" alt="logo de 4EverMore" title="Ve al inicio"></a>
+      </div>
 
-        
-      <a href="#inicio" class="logo-container enlace">
+      <!-- Logo para escritorio -->
+      <a href="#inicio" class="logo-container enlace header-item">
         <img src="./img/4evermore-copy.png" alt="4EverMore copy" title="Ve al inicio" class="logo">
       </a>
 
-      <!-- NAV -->
-      <nav class="menu-container">
+      <!-- Íconos de navegador: cambiar de tema e idioma -->
+      <div class="icon-container header-item">
+          <img src="./img/moon-ico.svg"
+               alt="icono de tema light / dark"
+               id="theme-button"
+               class="icono btn-dark"
+               title="Cambiar el color del tema">
+      </div>
+
+      <!-- Botón para abrir menú (sólo móvil) -->
+      <div class="mobile-visible header-item">
+        <input type="checkbox" id="toggle-button" class="toggle-button">
+        <label for="toggle-button"></label>
+      </div>
+        
+      
+
+      <!-- Menú nav -->
+      <nav class="menu-container header-item">
         <ul class="menu" id="menu">
-          <li><a href="#inicio" class="enlace">Inicio</a></li>
-          <li><a href="#acerca" class="enlace">Acerca</a></li>
-          <li><a href="#skills" class="enlace">Habilidades</a></li>
-          <li><a href="#portfolio" class="enlace">Portfolio</a></li>
+          <li><a href="#inicio" class="enlace active-link" data-scroll-spy>Inicio</a></li>
+          <li><a href="#acerca" class="enlace" data-scroll-spy>Acerca</a></li>
+          <li><a href="#skills" class="enlace" data-scroll-spy>Habilidades</a></li>
+          <li><a href="#portfolio" class="enlace" data-scroll-spy>Portfolio</a></li>
         </ul>
       </nav>
 
+      <!-- Toggle button -->
+      <!-- <input type="checkbox" id="toggle-button" class="toggle-button">
+      <label for="toggle-button"></label> -->
+
     </header>
+
+
+
+
+
 
 
 
@@ -79,14 +119,11 @@
     <!-- Cuerpo de la página -->
     <main>
 
-      <section id="inicio" class="parallax-container">
-        <div class="bg-wrap">
-          <div class="bg inicio"></div>
-        </div>        
-      </section>
+      <!-- Body Hero Inicio -->
+      <section id="inicio" class="parallax" data-scroll-spy></section>
 
       <!-- Acerca -->
-      <section id="acerca" class="section">
+      <section id="acerca" class="section" data-scroll-spy>
         <h2 class="acerca-banner subtitle-banner">Acerca de mí</h2>
         <h3 class="section-content-title">Deja que la vida te sorprenda...</h3>
         <article class="section-content">
@@ -101,7 +138,7 @@
 
 
       <!-- Skills -->
-      <section id="skills" class="section">
+      <section id="skills" class="section" data-scroll-spy>
         <h2 class="subtitle-banner">Habilidades</h2>
         <h3 class="section-content-title">Los errores son oportunidades para llegar a la perfección...</h3>
         <article class="section-content card-container">
@@ -212,7 +249,7 @@
 
 
       <!-- Portafolio -->
-      <section id="portfolio" class="section">
+      <section id="portfolio" class="section" data-scroll-spy>
         <h2 class="subtitle-banner">Portfolio</h2>
         <h3 class="section-content-title">El fin es brindar soluciones</h3>
         <article class="section-content">
@@ -254,21 +291,13 @@
           <span class="carrousel-arrow arrow-right">></span>
         </div>
       </section>
-
-      <!-- <section id="portfolio-container" class="item-container">
-        <div class="item-contain"></div>
-        <div class="item-contain"></div>
-        <div class="item-contain"></div>
-        <div class="item-contain"></div>
-        <div class="item-contain"></div>
-        <div class="item-contain"></div>
-      </section> -->
-
-      <!-- <section>
-      </section> -->
-        
           
     </main>
+
+
+
+
+
 
 
 
@@ -278,27 +307,35 @@
     <footer class="main-footer">
 
       <p class="copy">Portfolio de José Ángel Lemus | 2021 </p>
-      <a href="https://www.facebook.com/4evermoremarca" target="_blank">
-        <img src="./img/fb-ico.svg" alt="icono de facebook" title="icono de Facebook" class="icono">
-      </a>
-      <a href="mailto:jangeljr@live.com.mx">
-        <img src="./img/mail-ico.svg" alt="icono de correo (sobre)" class="icono">
-      </a>
-      <a href="https://wa.me/+5215528854540">
-        <img src="./img/wa-ico.svg" alt="icono de whatsapp" class="icono">
-      </a>
+
+      <!-- Íconos para redes sociales -->
+      <div class="icon-container">
+
+        <a href="https://www.facebook.com/4evermoremarca" target="_blank">
+          <img src="./img/fb-ico.svg" alt="icono de facebook" title="icono de Facebook" class="icono">
+        </a>
+
+        <a href="mailto:jangeljr@live.com.mx">
+          <img src="./img/mail-ico.svg" alt="icono de correo (sobre)" class="icono">
+        </a>
+
+        <!-- <a href="https://wa.me/+5215528854540"> -->
+        <a href="https://n9.cl/36gme">
+          <img src="./img/wa-ico.svg" alt="icono de whatsapp" class="icono">
+        </a>
+
+      </div>
       
     </footer>
 
 
   <script src="./js/carrousel.js"></script>
   <script src="./js/loader.js"></script>
-  <!-- <script src="./js/funciones.js"></script> -->
+  <script src="./js/nav.js"></script>
+  <script src="./js/dark-theme.js"></script>
+  <script src="./js/scroll-spy.js"></script>
   <script>
-    // CONSTANTES
-    const $toggleButton = document.getElementById("toggle-button")
-          // $loader = document.getElementById("loader")
-    let $enlaces = document.querySelectorAll(".enlace");
+    // CONSTANTES Y VARIABLES
 
 
 
@@ -307,21 +344,11 @@
 
 
     // EJECUCIÓN
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   setTimeout(() => {
-    //     $loader.classList.add("loader-inactive")
-        
-    //   }, 1000);
-    // })
-
-    $enlaces.forEach(enlace => {
-      enlace.onclick = () => {
-        // console.log(el);
-        if ($toggleButton.checked == true) {
-          $toggleButton.checked = false;
-        }
-      }
+    document.addEventListener("DOMContentLoaded", (e) => {
+      activeLink()
+      scrollSpy()
     })
+
   </script>
   </body>
 </html>
