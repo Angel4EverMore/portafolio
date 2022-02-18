@@ -1,0 +1,20 @@
+.parallax {
+  width: 100%;
+  height: calc(100vw * .75);
+  
+  background-size: 100vw calc(100vw * .75);
+  background-position: center 0;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  
+  @media screen and (min-width: $responsive-size) {
+    min-height: 100vh;
+    
+    background-position: top center;
+    background-size: cover;
+  }
+}
+
+#inicio {
+  background-image: url(../img/me-nor.jpg);
+}
