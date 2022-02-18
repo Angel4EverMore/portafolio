@@ -22,6 +22,7 @@
   // $text-base-color: #323232;      //Gris Oxford
   $text-secondary-color: #c8c8c8; //Gris claro
   $highlight-color: #00aee5;      //Azul 4e+
+  $dark-highlight-color: #1d5e88;   // Azul fuerte
 
 // Breakpoints
   $responsive-size: 800px;
@@ -30,8 +31,9 @@
   @import "base";
   @import "loader";
   @import "header";
-  // @import "inicio";
+  @import "parallax";
   @import "secciones";
   @import "cards";
   @import "carrousel";
   @import "footer";
+  @import "dark-theme";
