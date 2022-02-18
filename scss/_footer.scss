@@ -6,12 +6,43 @@ footer {
 .main-footer{
   background-color: $secondary-color;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   height: 6rem;
   align-items: center;
-  .copy, .icono {
-    color: $text-secondary-color;
-    margin: auto 1rem;
+  padding: 0 2rem;
+  // .icono:hover,
+  // .icono:active {
+    // }
+    
   }
 
-}
+  .copy, .icono {
+    color: $text-secondary-color;
+    margin: .5rem 1rem;
+  }
+
+  .copy {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    // flex: 1 0;
+
+    @media screen and (min-width: $responsive-size) {
+      width: auto;
+      flex-shrink: 1;
+    }
+  }
+
+  .icono {
+    max-height: 30px;
+    max-width: 30px;
+    border-radius: 50%;
+    transition: transform .2s ease;
+
+    &:hover,
+    &:active {
+      transform: scale(1.25);
+
+    }
+  }

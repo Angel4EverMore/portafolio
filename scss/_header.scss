@@ -15,12 +15,26 @@
 
   @media screen and (min-width: $responsive-size){
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     box-shadow:2px 2px 10px 2px rgba($secondary-color, .9);
     top: 0;
   }
 }
 
+
+.mobile-visible {
+  @media screen and (min-width: $responsive-size) {
+    display: none;
+  }
+}
+
+.icon-container {
+  flex: 1 1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
 // Botones para dispositivos móviles
 // .nav-mobile {
@@ -46,6 +60,8 @@
 //     display: none;
 //   }
 // }
+
+
 .copy-container {
   a img {
     margin: auto 1.5rem;
@@ -247,5 +263,10 @@
       }
     }    
   }
+
+  a.active-link {
+    background-color: rgba($dark-highlight-color, .75);
+  }
+
 }
 

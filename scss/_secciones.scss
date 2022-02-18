@@ -1,50 +1,13 @@
-// PARALLAX
-.parallax-container{
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: calc(100vw * .75);
-  .bg-wrap {
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    .bg {
-      position: fixed;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: 100vw calc(100vw * .75);
-      background-position: left top;
-      background-repeat: no-repeat;
-      transform: translateZ(0);
-      will-change: transform;
-      z-index: -1;
-    }
-  }
-  @media screen and (min-width: $responsive-size) {
-    height: calc(100vw * .75);
-    .bg-wrap .bg {
-      background-size: 100vw calc(100vw * .75);
-      // background-position: center left;
-      background-position: top center;
-    }
-  }
-}
-
-
-
-
 // SECCIONES
 .section {
   display: flex;
   flex-direction: column;
   background: $base-color;
-  min-height: 100vh;
+  // min-height: 100vh;
+
+  @media screen and (min-width: $responsive-size) {
+    min-height: 100vh;
+  }
 
   &-content-title {
     color: $highlight-color;
@@ -134,21 +97,3 @@
   }
 }
 
-
-.inicio {  
-  background-image: url(../img/me-nor.jpg);
-
-  @media screen and (min-width: 1000px) {
-      background-position: center center !important;
-  }
-}
-
-// .acerca {
-//   background-image: url(../img/me-col.jpg);
-
-//   @media screen and (max-width: $responsive-size){
-//       // background-image: url(../img/me-col.jpg);
-//       background-size: 100% 100vh;
-//       background-position: center center;
-//   }
-// }
