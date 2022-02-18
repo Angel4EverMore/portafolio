@@ -1,58 +1,79 @@
+// CARDS (FLEX)
 .card-container {
-  // background: salmon;
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: baseline;
 
-  .card-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 200px;
-    min-height: 100px;
-    
-    margin: 10px;
-    padding: 15px;
-    cursor: pointer;
+  margin-bottom: 5em;
+}
+
+.card-item {
+  flex: 1 1 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 200px;
+  min-height: 5rem;
+  margin: auto;
+
+  text-align: center;
+  border: .5px solid darken($base-color, 2);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+  background: $white;
+
+  * {
     background: $white;
-    border: .5px solid darken($base-color, 2);
-    border-radius: 5px;
-    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+  }
+}
+.card-item-title {
+  width: 100%;
+  padding: 1rem;
+  color: $dark-highlight-color;
+}
+.card-item-content {
+  width: 100%;
+  padding: 1rem 1rem;
+  // transition: all .5s ease-in-out;
 
-    &-title {
-      margin-bottom: 10px;
-      text-align: center;
-      color: darken($highlight-color, 5);
-    }
-
-    &-content {
-      // position: relative;
-      width: 100%;
-      height: 100%;
-      // padding: 10px;
-      // background: green;
-      // color: white;
-
-      // ul {
-      //   position: absolute;
-      // }
-    }
+  ul li {
+    margin-bottom: .7rem;
   }
 }
 
+
 @media screen and (min-width: $responsive-size) {
   .card-item {
-    justify-content: center;
-    transition: all 3s ease;
+    height: 6rem;
 
     &-content {
-      transform: translateY(300px);
       display: none;
-      transition: all 3s ease;
     }
-    
-    &:hover .card-item-content {
-      transform: translateY(0);
-      display: block;
-      transition: all 3s ease;
+
+    &:hover {
+      .card-item-title,
+      .card-item-content {
+        z-index: 10;
+        transform: scale(1.1);
+        border: thin solid darken($base-color, 2);
+      }
+
+      .card-item-title {
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+      }
+
+      .card-item-content {
+        display: block;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+      }
     }
   }
+  
 }
