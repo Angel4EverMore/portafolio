@@ -1,0 +1,102 @@
+
+// CLASE PRINCIPAL
+.dark-theme {
+  * {
+  // :not(.inicio) {
+    color: $base-color;
+    background-color: darken($secondary-color, 5%);
+  }
+
+
+  // LOADER
+  .loading-page,
+  .loading-list li {
+    background: lighten($secondary-color, 5);
+  }
+
+
+  // NAVIGATION MENÚ BAR
+  .main-header {
+    background-color: rgba($secondary-color, .75);
+
+    @media screen and (min-width: $responsive-size) {
+      box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    
+    * {
+      background-color: transparent;
+    }
+    
+    .menu-container {
+      background-color: rgba($secondary-color, .85);
+      box-shadow: 15px 0 10px -10px rgba(0, 0, 0, 0.5);
+
+      @media screen and (min-width: $responsive-size) {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      a {
+        box-shadow: 0 0 darken($secondary-color, 5%) inset;
+        color: $white;
+
+        &:hover {
+          box-shadow: 0 -40vh darken($secondary-color, 5%) inset;
+        }
+      }
+
+    }
+
+  }
+
+
+  // SECCIONES
+  // Título banner
+  .subtitle-banner {
+    // background: linear-gradient(45deg, $secondary-color, lighten($secondary-color, 10));
+    background: linear-gradient(45deg, darken($secondary-color, 5%), lighten($secondary-color, 5%));
+
+    &::after {
+      background: linear-gradient(-45deg, transparent 47%, rgba($white, .6) 47%, transparent 53%) 0px 0px;
+      background-size: 10px 10px;
+    }
+  }
+  // Título sección
+  .section-content-title {
+    color: $highlight-color;
+    // color: rgba($highlight-color, .75);
+  }
+
+
+  // CARDS
+  .card-item {
+    background: $secondary-color;
+    border: .5px solid lighten($secondary-color, 5%);
+    
+    * {
+      background: $secondary-color;
+    }
+
+    &-title {
+      color: $dark-highlight-color;
+    }
+
+
+    @media screen and (min-width: $responsive-size) {
+      &:hover .card-item-title,
+      &:hover .card-item-content {
+        border: 2px solid lighten($secondary-color, 5%);
+      }
+
+      &:hover .card-item-title {
+        border-bottom: none;
+      }
+      &:hover .card-item-content {
+        border-top: none;
+      }
+      
+    }
+  }
+
+}
