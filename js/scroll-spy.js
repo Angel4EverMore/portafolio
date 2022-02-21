@@ -25,7 +25,8 @@ function scrollSpy() {
     // root:     // Elemento desde el cual se medirá el scroll. Por defecto es el body
     // rootMargin: "200px 0px 150px 0px",   // Reduce el margen de observación en cada seccion. Los valores se establecen en el sentido del reloj (CSS) y en px
     // treshold: [0.5, 0.75],   // Cuando el elemento tenga una visibilidad entre el rango establecido 50% y 70%
-    threshold: .5
+    // rootMargin: "250px 0px 100px 0px"
+    threshold: .4
   })
   // Mostrar opciones del observador
   // console.log("Observador: ", observer);
