@@ -12,7 +12,7 @@
     <meta author="José Ángel Lemus Luna | 4EverMore"/>
     <meta name="content" description="Portfolio de José Ángel Lemus. Te gusta lo que ves, sería un gusto trabajar contigo."/>
     <meta name="keywords" content="Diseño programacion web portafolio Jose Angel PHP HTML CSS Javascript CRM ERP landing pages">
-    <link rel="manifest" href="../manifest.webmanifest">
+    <!-- <link rel="manifest" href="../manifest.webmanifest"> -->
 
 
     <!-- Iconos para página web y dispositivos móviles -->
@@ -43,10 +43,29 @@
     <link rel="stylesheet" media="all" href="./css/styles.css"/>
 
 
+    
     <title>José Ángel Lemus | Portfolio </title>
   </head>
 
   <body data-dark>
+    <!-- Íconos laterales -->
+    <div class="aside-icon-bar">
+      <a href="#inicio" class="enlace">
+        <img src="./img/circle-arrow-up-ico.svg"
+             id="scroll-to-top-btn"
+             class="icono aside-icon"
+             title="Ir al inicio">
+      </a>
+
+      <input type="checkbox" 
+             id="toggle-button"
+             hidden>
+      <label for="toggle-button">
+        <img src="./img/ellipsis-v-ico.svg" 
+             class="icono aside-icon mobile-visible">
+      </label>
+    </div>
+
     <!-- LOADER -->
     <div class="loading-page" id="loader">
       <ul class="loading-list">
@@ -69,41 +88,45 @@
           <a href="#inicio" class="enlace"><img src="./img/4evermore-logo.png" alt="logo de 4EverMore" title="Ve al inicio"></a>
       </div>
 
+      <!-- Botón para abrir menú (sólo móvil) -->
+      <!-- <div class="mobile-visible header-item toggle-button-container">
+        <input type="checkbox" id="toggle-button" class="toggle-button">
+        <label for="toggle-button"></label>
+      </div> -->
+
       <!-- Logo para escritorio -->
       <a href="#inicio" class="logo-container enlace header-item">
         <img src="./img/4evermore-copy.png" alt="4EverMore copy" title="Ve al inicio" class="logo">
       </a>
-
-      <!-- Íconos de navegador: cambiar de tema e idioma -->
-      <div class="icon-container header-item">
-          <img src="./img/moon-ico.svg"
-               alt="icono de tema light / dark"
-               id="theme-button"
-               class="icono btn-dark"
-               title="Cambiar el color del tema">
-      </div>
-
-      <!-- Botón para abrir menú (sólo móvil) -->
-      <div class="mobile-visible header-item">
-        <input type="checkbox" id="toggle-button" class="toggle-button">
-        <label for="toggle-button"></label>
-      </div>
-        
-      
 
       <!-- Menú nav -->
       <nav class="menu-container header-item">
         <ul class="menu" id="menu">
           <li><a href="#inicio" class="enlace active-link" data-scroll-spy>Inicio</a></li>
           <li><a href="#acerca" class="enlace" data-scroll-spy>Acerca</a></li>
-          <li><a href="#skills" class="enlace" data-scroll-spy>Habilidades</a></li>
+          <li><a href="#habilidades" class="enlace" data-scroll-spy>Habilidades</a></li>
           <li><a href="#portfolio" class="enlace" data-scroll-spy>Portfolio</a></li>
         </ul>
       </nav>
 
-      <!-- Toggle button -->
-      <!-- <input type="checkbox" id="toggle-button" class="toggle-button">
-      <label for="toggle-button"></label> -->
+      <!-- Íconos de navegador: cambiar de tema e idioma -->
+      <div class="header-item icon-container icon-header-container">
+        <!-- Ícono de idioma -->
+        <a href="">
+          <img src="./img/en-ico.svg"
+               alt="icono de english"
+               class="icono"
+               title="Enghlish version">
+        </a>
+
+        <!-- Ícono de tema -->
+        <img src="./img/moon-ico.svg"
+             alt="icono de tema light / dark"
+             id="theme-button"
+             class="icono btn-dark"
+             title="Cambiar el color del tema">
+        
+      </div>
 
     </header>
 
@@ -137,8 +160,8 @@
 
 
 
-      <!-- Skills -->
-      <section id="skills" class="section" data-scroll-spy>
+      <!-- Habilidades -->
+      <section id="habilidades" class="section" data-scroll-spy>
         <h2 class="subtitle-banner">Habilidades</h2>
         <h3 class="section-content-title">Los errores son oportunidades para llegar a la perfección...</h3>
         <article class="section-content card-container">
@@ -259,7 +282,11 @@
         </article>
 
         <div class="carrousel">
-          <span class="carrousel-arrow arrow-left"><</span>
+          <!-- Flecha izquierda -->
+          <img src="./img/arrow-left-ico.svg" 
+               alt="icono svg de flecha izquierda"
+               class="icono carrousel-arrow arrow-left">
+
 
           <div class="carrousel-card-container" id="carrousel-portafolio">
             <div class="carrousel-item">
@@ -288,7 +315,10 @@
             </div>
           </div>
 
-          <span class="carrousel-arrow arrow-right">></span>
+          <!-- Flecha derecha -->
+          <img src="./img/arrow-right-ico.svg" 
+               alt="icono svg de flecha derecha"
+               class="icono carrousel-arrow arrow-right">
         </div>
       </section>
           
@@ -306,7 +336,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
 
-      <p class="copy">Portfolio de José Ángel Lemus | 2021 </p>
+      <p class="copy">Portafolio de José Ángel Lemus | 2021 </p>
 
       <!-- Íconos para redes sociales -->
       <div class="icon-container">
@@ -319,8 +349,16 @@
           <img src="./img/mail-ico.svg" alt="icono de correo (sobre)" class="icono">
         </a>
 
+        <a href="www.linkedin.com/in/jose-angel-lemus" target="_blank">
+          <img src="./img/linkedin-ico.svg" alt="icono svg de LinkedIn" class="icono">
+        </a>
+        
+        <a href="https://github.com/Angel4EverMore?tab=repositories" target="_blank">
+          <img src="./img/github-ico.svg" alt="icono svg de Github" class="icono">
+        </a>
+
         <!-- <a href="https://wa.me/+5215528854540"> -->
-        <a href="https://n9.cl/36gme">
+        <a href="https://n9.cl/36gme" target="_blank">
           <img src="./img/wa-ico.svg" alt="icono de whatsapp" class="icono">
         </a>
 
@@ -331,9 +369,11 @@
 
   <script src="./js/carrousel.js"></script>
   <script src="./js/loader.js"></script>
-  <script src="./js/nav.js"></script>
+  <!-- <script src="./js/nav.js"></script> -->
   <script src="./js/dark-theme.js"></script>
   <script src="./js/scroll-spy.js"></script>
+
+  <script src="./js/index.js" type="module"></script>
   <script>
     // CONSTANTES Y VARIABLES
 
@@ -345,9 +385,15 @@
 
     // EJECUCIÓN
     document.addEventListener("DOMContentLoaded", (e) => {
-      activeLink()
+      // activeLink()
       scrollSpy()
     })
+
+
+
+
+
+    
 
   </script>
   </body>
