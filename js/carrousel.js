@@ -1,140 +1,73 @@
-//  CONSTANTES Y VARIABLES
-const carrouselContainer = document.getElementById("carrousel-portafolio");
-// let posicionActual = 0;
+const d = document
 
 
-
-// FUNCIONES
-// function animarCarrousel(carrousel) {
-//   let carrouselCards = carrousel.querySelectorAll(".carrousel-item"),
-//       cantCards = carrouselCards.length,
-//       cardWidth = carrousel.querySelector(".carrousel-item").offsetWidth
-
-
-//   // console.log(cantCards);
-//   // console.log(cardWidth);
-//   carrouselCards.forEach(element => {
-//     let coords = element.getBoundingClientRect(),
-//         marginLeft = coords.left
-//     // console.log(coords.left);
-//     for (let i = 1; i <= cantCards; i++) {
-//       let nextMarginLeft = (i == 5) ? marginLeft : marginLeft * i;
-//       setTimeout(() => {
-//         // console.log(nextMarginLeft);
-//       }, 5000);
-      
-//     }
-//   });
-  
-// }
-
-
-function avanzarFoto() {
-  if (posicionActual > cantCards) {
-    posicionActual = 0
-  } else {
-    posicionActual++
-  }
-  // return posicionActual
-  // console.log(posicionActual);
-  carrouselCards.forEach(element => {
-    let coords = element.getBoundingClientRect(),
-        marginLeft = coords.left,
-        nextMarginLeft = marginLeft - (posicionActual * cardWidth)
-
-    console.log(nextMarginLeft);
-  });
-}
-
-function retrocederFoto() {
-  if (posicionActual <= 0) {
-    posicionActual = cantCards
-  } else {
-    posicionActual--
-  }
-}
-
-function playCarrousel(tiempo) {
-  intervalo = setInterval(avanzarFoto, tiempo)
-  // console.log(posicionActual);
-}
-
-
-function Ejecutar(carrousel, milisegundos = 2000) {
-  let $carrouselCards = carrousel.querySelectorAll(".carrousel-item"),
-      cantCards = $carrouselCards.length,
-      $uniqueCard = carrousel.querySelector(".carrousel-item"),
-      $carrouselContainer = $uniqueCard.parentElement;
-      cardWidth = $uniqueCard.offsetWidth,
-      $btnAtras = carrousel.previousElementSibling,
-      $btnAdelante = carrousel.nextElementSibling,
-      posicionActual = 0,
-      MILISEGUNDOS = milisegundos,
-      intervalo = '';
-
-  let cardStyle = $uniqueCard.currentStyle || window.getComputedStyle($uniqueCard),
-      strCardLeftMargin = cardStyle.marginLeft.slice(0, -2),
-      intCardLeftMargin = parseInt(strCardLeftMargin);
+export default function animaCarrousel(contenedor) {
+  const $contenedor = d.getElementById(contenedor),
+        $prevBtn = $contenedor.parentElement.previousElementSibling,
+        $nextBtn = $contenedor.parentElement.nextElementSibling
 
   
-  function avanzarItem() {
-    if (posicionActual == cantCards -1) {
-      posicionActual = 0
-    } else {
-      posicionActual++
-    }
+  // Obtener distancia a trasladar
+  const obtenerDesplazamiento = item => {
+    let itemWidth = item.offsetWidth,
+        itemStyle = item.currentStyle || window.getComputedStyle(item),
+        leftMargin = itemStyle.marginLeft.slice(0, -2),    // Es un string
+        leftMarginInt = parseInt(leftMargin),
+        distancia = itemWidth + (leftMarginInt * 2)
 
-    if (posicionActual == 0) {
-      nextMarginLeft = posicionActual * cardWidth
-    } else {
-      nextMarginLeft = (posicionActual * cardWidth) + (intCardLeftMargin * 2)
-    }
-
-    $carrouselCards.forEach(element => {
-      element.style.transform = `translate(-${nextMarginLeft}px)`
-    })
+    return(distancia)
   }
+
+
+  // Avanzar slider
+  const nextItem = () => {
+    let $firstItem = $contenedor.firstElementChild,
+        mover = obtenerDesplazamiento($firstItem)
+
+    $contenedor.style.marginLeft = `-${mover}px`
+    $contenedor.style.transition = "margin .5s ease"
+
+    setTimeout(() => {
+      $contenedor.style.transition = "none"
+      $contenedor.insertAdjacentElement("beforeend", $firstItem)
+      $contenedor.style.marginLeft = 0
+    }, 500);
+
+  }
+
+
+  // Retroceder slider
+  const prevItem = () => {
+    let $lastItem = $contenedor.lastElementChild,
+        mover = obtenerDesplazamiento($lastItem)
+
+        $contenedor.insertAdjacentElement("afterbegin", $lastItem)
+        $contenedor.style.marginLeft = `-${mover}px`
+        $contenedor.style.transition = "none"
+        
+        setTimeout(() => {
+          $contenedor.style.transition = "margin .5s ease"
+      $contenedor.style.marginLeft = 0
+    }, 10);
+
+  }
+
+
+  let intervalo = setInterval(nextItem, 3000)
+
+  const stop = () => { clearInterval(intervalo) },
+        play = () => { intervalo = setInterval(nextItem, 3000) }
   
-  function retrocederItem() {
-    if (posicionActual == 0) {
-      posicionActual = cantCards - 1
-    } else {
-      posicionActual--
-    }
 
-    if (posicionActual < cantCards -1 ) {
-      nextMarginLeft = posicionActual * cardWidth * -1
-    } else {
-      nextMarginLeft = ((posicionActual * cardWidth) + (intCardLeftMargin * 2)) * -1
-    }
-
-    $carrouselCards.forEach(element => {
-      element.style.transform = `translate(${nextMarginLeft}px)`
-    })
-  }
-  
-  function playCarrousel() {
-    intervalo = setInterval(avanzarItem, MILISEGUNDOS)
-    // console.log(posicionActual);
+  if ($prevBtn !== null) {
+    $prevBtn.addEventListener('click', prevItem)
+    $nextBtn.addEventListener('click', nextItem)
   }
 
-  function stopCarrousel(){
-    clearInterval(intervalo);
-    // intervalo = clearInterval()
-  }
 
-  playCarrousel()
-  // $btnAdelante.onclick = avanzarItem()
-  $carrouselContainer.addEventListener("mouseover", stopCarrousel)
-  $carrouselContainer.addEventListener("mouseleave", playCarrousel)
-  $btnAdelante.addEventListener("click", avanzarItem)
-  $btnAtras.addEventListener("click", retrocederItem)
+  function newFunction() {
+    $contenedor.addEventListener("mouseover", stop)
+    $contenedor.addEventListener("mouseleave", play)
+  }
 }
-
-
-
-// EJECUCIÓN
-Ejecutar(carrouselContainer, 4000)
-
-
 
