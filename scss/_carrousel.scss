@@ -18,6 +18,12 @@
     // background: rgba(8, 27, 192, 0.5);
   }
 
+  &-slider {
+    width: 100%;
+    display: flex;
+    // background: teal;
+  }
+  
   &-item {
     // display: inline-block;
     margin: auto 20px;
@@ -26,7 +32,7 @@
     // background: rgba(41, 163, 16, 0.7);
     background: $white;
     transition: all 2s ease;
-    border: .5px solid $base-color;
+    // border: .5px solid $base-color;
     border-radius: 5px;
 
     &-title {

@@ -314,13 +314,14 @@
 }
 
 #scroll-to-top-btn {
-  transition: all 3s ease;
-  opacity: 0;
-  display: none;
+  transition: all .5s ease;
+  // opacity: 0;
+  // display: none;
 }
 .non-visible {
   opacity: 0;
-  display: none;
+  visibility: hidden;
+  // display: none;
 }
 .visible {
   opacity: 1;
