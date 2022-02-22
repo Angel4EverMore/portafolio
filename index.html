@@ -50,12 +50,12 @@
   <body data-dark>
     <!-- Íconos laterales -->
     <div class="aside-icon-bar">
-      <a href="#inicio" class="enlace">
+      <!-- <a href="#inicio" class="enlace"> -->
         <img src="./img/circle-arrow-up-ico.svg"
              id="scroll-to-top-btn"
-             class="icono aside-icon"
+             class="icono aside-icon non-visible"
              title="Ir al inicio">
-      </a>
+      <!-- </a> -->
 
       <input type="checkbox" 
              id="toggle-button"
@@ -289,29 +289,27 @@
 
 
           <div class="carrousel-card-container" id="carrousel-portafolio">
-            <div class="carrousel-item">
-              <h4 class="carrousel-item-title">Card 1</h4>
-              <h4 class="carrousel-item-content"></h4>
-            </div>
-
-            <div class="carrousel-item">
-              <h4 class="carrousel-item-title">Card 2</h4>
-              <h4 class="carrousel-item-content"></h4>
-            </div>
-
-            <div class="carrousel-item">
-              <h4 class="carrousel-item-title">Card 3</h4>
-              <h4 class="carrousel-item-content"></h4>
-            </div>
-
-            <div class="carrousel-item">
-              <h4 class="carrousel-item-title">Card 4</h4>
-              <h4 class="carrousel-item-content"></h4>
-            </div>
-
-            <div class="carrousel-item">
-              <h4 class="carrousel-item-title">Card 5</h4>
-              <h4 class="carrousel-item-content"></h4>
+            <div class="carrousel-slider" id="slider-portafolio">
+              <div class="carrousel-item">
+                <h4 class="carrousel-item-title">Card 1</h4>
+                <h4 class="carrousel-item-content"></h4>
+              </div>
+              <div class="carrousel-item">
+                <h4 class="carrousel-item-title">Card 2</h4>
+                <h4 class="carrousel-item-content"></h4>
+              </div>
+              <div class="carrousel-item">
+                <h4 class="carrousel-item-title">Card 3</h4>
+                <h4 class="carrousel-item-content"></h4>
+              </div>
+              <div class="carrousel-item">
+                <h4 class="carrousel-item-title">Card 4</h4>
+                <h4 class="carrousel-item-content"></h4>
+              </div>
+              <div class="carrousel-item">
+                <h4 class="carrousel-item-title">Card 5</h4>
+                <h4 class="carrousel-item-content"></h4>
+              </div>
             </div>
           </div>
 
@@ -349,7 +347,7 @@
           <img src="./img/mail-ico.svg" alt="icono de correo (sobre)" class="icono">
         </a>
 
-        <a href="www.linkedin.com/in/jose-angel-lemus" target="_blank">
+        <a href="https://www.linkedin.com/in/jose-angel-lemus" target="_blank">
           <img src="./img/linkedin-ico.svg" alt="icono svg de LinkedIn" class="icono">
         </a>
         
@@ -367,16 +365,15 @@
     </footer>
 
 
-  <script src="./js/carrousel.js"></script>
-  <script src="./js/loader.js"></script>
-  <!-- <script src="./js/nav.js"></script> -->
-  <script src="./js/dark-theme.js"></script>
-  <script src="./js/scroll-spy.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/dark-theme.js"></script>
+    <script src="./js/scroll-spy.js"></script>
+    <!-- <script src="./js/nav.js"></script> -->
 
   <script src="./js/index.js" type="module"></script>
   <script>
     // CONSTANTES Y VARIABLES
-
+    
 
 
     // FUNCIONES
