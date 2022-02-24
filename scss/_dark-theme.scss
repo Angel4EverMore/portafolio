@@ -101,6 +101,9 @@
 
   .aside-icon-bar {
     background-color: transparent;
+    * {
+      background-color: transparent;
+    }
   }
 
 }
