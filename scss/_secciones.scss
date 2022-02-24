@@ -7,6 +7,7 @@
 
   @media screen and (min-width: $responsive-size) {
     min-height: 100vh;
+    justify-content: space-between;
   }
 
   &-content-title {
@@ -28,6 +29,7 @@
     @media screen and (min-width: $responsive-size) {
       padding-right: 5rem;
       padding-left: 5rem;
+      height: 50vh;
     }
 
     &-text {
@@ -41,6 +43,8 @@
       display: none;
       @media screen and (min-width: $responsive-size) {
         display: inline-block;
+        float: left;
+        margin: auto 30px 40px auto;
         width: 150px;
         height: auto;
         flex: 1 1;
