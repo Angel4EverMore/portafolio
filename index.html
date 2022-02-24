@@ -11,7 +11,7 @@
     <!--Metadatos para posicionamiento en buscadores-->
     <meta author="José Ángel Lemus Luna | 4EverMore"/>
     <meta name="content" description="Portfolio de José Ángel Lemus. Te gusta lo que ves, sería un gusto trabajar contigo."/>
-    <meta name="keywords" content="Diseño programacion web portafolio Jose Angel PHP HTML CSS Javascript CRM ERP landing pages">
+    <meta name="keywords" content="Diseño programacion web portafolio Jose Angel Lemus Fullstack-developer team-leader PHP HTML CSS Javascript CRM ERP landing pages">
     <!-- <link rel="manifest" href="../manifest.webmanifest"> -->
 
 
@@ -23,6 +23,17 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/4evermore-logo-app.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/4evermore-logo-app.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/4evermore-logo-app.png" />
+
+
+    <!-- Metadatos para PWA -->
+    <meta name="theme-color" content="#1d5e88">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1d5e88">
+    <link rel="apple-touch-start-up-image" href="./img/4evermore-logo.png">
+    <link rel="manifest" href="./manifest.json">
+    <!-- // falta 64, 32, 16 y 1024 en imagenes de manifest -->
 
 
     <!-- Metadatos para redes sociales og -->
@@ -116,7 +127,7 @@
           <img src="./img/en-ico.svg"
                alt="icono de english"
                class="icono"
-               title="Enghlish version">
+               title="Switch to Enghlish">
         </a>
 
         <!-- Ícono de tema -->
@@ -124,6 +135,7 @@
              alt="icono de tema light / dark"
              id="theme-button"
              class="icono btn-dark"
+             style="cursor: pointer;"
              title="Cambiar el color del tema">
         
       </div>
@@ -150,10 +162,15 @@
         <h2 class="acerca-banner subtitle-banner">Acerca de mí</h2>
         <h3 class="section-content-title">Deja que la vida te sorprenda...</h3>
         <article class="section-content">
-          <img src="./img/fullnes-square.jpg" class="section-content-img" alt="fullness square image">
           <p class="section-content-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, enim! Sapiente hic ducimus, ex nulla dolores velit aut vitae consequuntur quidem dignissimos cum consectetur earum pariatur dolore perferendis ea quibusdam!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque nesciunt quidem magnam unde inventore sit eligendi quia veritatis, eaque est voluptates minima provident quaerat quibusdam ipsam enim fuga harum.
+            <img src="./img/fullnes-square.jpg" class="section-content-img" alt="fullness square image">
+            Soy <b>apasionado y medio <i>freaky</i> por la tecnología e innovación</b> en el desarrollo e implementación de entornos web funcionales, prácticos e intuitivos. <br><br>
+
+            De manera autodidacta, y con una constante curiosidad y compromiso, he logrado aprender <i>(mediante cursos, mucha investigación, aprendiendo, fallando, y volviendo a intentar hasta alcanzar el objetivo)</i> y desempeñar eficazmente todo el proceso del proyecto: desde el levantamiento de requerimientos, hasta la implementación, soporte y asistencia; liderando equipos que en conjunto con los clientes, hemos logardo resultados exitosos.<br><br>
+
+            Me encanta trabajar con gente dispuesta a compartir/adquirir conocimiento y experiencia con el fin de alcanzar una meta en común. Mi compromiso es brindar soluciones (tanto a equipo interno, como usuarios externos), convirtiendo los requerimientos del cliente en experiencias de usuario satisfactorias.<br><br>
+
+            Gusto de leer (Sci-fi, manejo de personal, crecimiento personal), practicar, viajar, conocer nuevas culturas, una buena charla... y el café!!!
           </p>
         </article>
       </section>
@@ -163,7 +180,7 @@
       <!-- Habilidades -->
       <section id="habilidades" class="section" data-scroll-spy>
         <h2 class="subtitle-banner">Habilidades</h2>
-        <h3 class="section-content-title">Los errores son oportunidades para llegar a la perfección...</h3>
+        <h3 class="section-content-title">La mejora en un habilidad consiste en repetir contínuamente<br> el ciclo de practicar, fallar, aprender del error y volver a intentar<br> hasta alcanzar la perfección...</h3>
         <article class="section-content card-container">
           <!-- <div class="card-container"> -->
             <div class="card-item">
@@ -275,13 +292,13 @@
       <section id="portfolio" class="section" data-scroll-spy>
         <h2 class="subtitle-banner">Portfolio</h2>
         <h3 class="section-content-title">El fin es brindar soluciones</h3>
-        <article class="section-content">
+        <article class="section-content" style="height: auto;">
           <p class="section-content-text">
-            Demos de algunos proyectos concluidos satisfactoriamentes en los que he tenido la oportunidad de aportar mi conocimiento y experiencia.
+            Algunos proyectos concluidos satisfactoriamentes en los que he tenido la oportunidad de aportar mi conocimiento y experiencia.
           </p>
         </article>
 
-        <div class="carrousel">
+        <div class="carrousel" style="height: 50vh;">
           <!-- Flecha izquierda -->
           <img src="./img/arrow-left-ico.svg" 
                alt="icono svg de flecha izquierda"
@@ -291,24 +308,32 @@
           <div class="carrousel-card-container" id="carrousel-portafolio">
             <div class="carrousel-slider" id="slider-portafolio">
               <div class="carrousel-item">
-                <h4 class="carrousel-item-title">Card 1</h4>
-                <h4 class="carrousel-item-content"></h4>
+                <h4 class="carrousel-item-title">Video 1</h4>
+                <h4 class="carrousel-item-content">Próximamente</h4>
+                <!-- <video style="width: 100%;" 
+                       controls="controls" 
+                       preload="auto" 
+                       poster="./video/camisa.png"
+                       muted>
+                    <source src="./video/camisa.webm" 
+                            type='video/webm; codecs="vp8,vorbis"'>
+                </video> -->
               </div>
               <div class="carrousel-item">
-                <h4 class="carrousel-item-title">Card 2</h4>
-                <h4 class="carrousel-item-content"></h4>
+                <h4 class="carrousel-item-title">Video 2</h4>
+                <h4 class="carrousel-item-content">Próximamente</h4>
               </div>
               <div class="carrousel-item">
-                <h4 class="carrousel-item-title">Card 3</h4>
-                <h4 class="carrousel-item-content"></h4>
+                <h4 class="carrousel-item-title">Video 3</h4>
+                <h4 class="carrousel-item-content">Próximamente</h4>
               </div>
               <div class="carrousel-item">
-                <h4 class="carrousel-item-title">Card 4</h4>
-                <h4 class="carrousel-item-content"></h4>
+                <h4 class="carrousel-item-title">Video 4</h4>
+                <h4 class="carrousel-item-content">Próximamente</h4>
               </div>
               <div class="carrousel-item">
-                <h4 class="carrousel-item-title">Card 5</h4>
-                <h4 class="carrousel-item-content"></h4>
+                <h4 class="carrousel-item-title">Video 5</h4>
+                <h4 class="carrousel-item-content">Próximamente</h4>
               </div>
             </div>
           </div>
@@ -318,6 +343,8 @@
                alt="icono svg de flecha derecha"
                class="icono carrousel-arrow arrow-right">
         </div>
+
+        <!-- </article> -->
       </section>
           
     </main>
@@ -339,9 +366,9 @@
       <!-- Íconos para redes sociales -->
       <div class="icon-container">
 
-        <a href="https://www.facebook.com/4evermoremarca" target="_blank">
+        <!-- <a href="https://www.facebook.com/4evermoremarca" target="_blank">
           <img src="./img/fb-ico.svg" alt="icono de facebook" title="icono de Facebook" class="icono">
-        </a>
+        </a> -->
 
         <a href="mailto:jangeljr@live.com.mx">
           <img src="./img/mail-ico.svg" alt="icono de correo (sobre)" class="icono">
@@ -365,6 +392,7 @@
     </footer>
 
 
+    <script src="./js/index_sw.js"></script>
     <script src="./js/loader.js"></script>
     <script src="./js/dark-theme.js"></script>
     <script src="./js/scroll-spy.js"></script>
