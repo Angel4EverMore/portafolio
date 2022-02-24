@@ -65,9 +65,7 @@ export default function animaCarrousel(contenedor) {
   }
 
 
-  function newFunction() {
-    $contenedor.addEventListener("mouseover", stop)
-    $contenedor.addEventListener("mouseleave", play)
-  }
+  $contenedor.addEventListener("mouseover", stop)
+  $contenedor.addEventListener("mouseleave", play)
 }
 
