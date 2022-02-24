@@ -1,0 +1,44 @@
+{
+  "name": "Portafolio José Ángel Lemus",
+  "short_name": "Angel",
+  "description": "Bienvenido a mi presentación como fullstack developer. Me encataría colaborar contigo creando experiencias de usuario memorables e intuitivas.",
+  "theme_color": "#1d5e88",
+  "background_color": "#1d5e88",
+  "orientation" : "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope" : "./",
+  "categories": ["design", "web-design", "desarrollo-web"],
+  "lang": "es-MX",
+  "icons": [{
+    "src": "./img/ico-4EverMore-48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico-4EverMore-72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico-4EverMore-96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico-4EverMore-128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico-4EverMore-256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico-4EverMore-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
+
