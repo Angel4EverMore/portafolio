@@ -11,33 +11,63 @@
   "categories": ["design", "web-design", "desarrollo-web"],
   "lang": "es-MX",
   "icons": [{
-    "src": "./img/ico-4EverMore-48.png",
+    "src": "./img/ico_flat_16.png",
+    "sizes": "16x16",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_48.png",
     "sizes": "48x48",
     "type": "image/png"
   },
   {
-    "src": "./img/ico-4EverMore-72.png",
+    "src": "./img/ico_flat_64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_72.png",
     "sizes": "72x72",
     "type": "image/png"
   },
   {
-    "src": "./img/ico-4EverMore-96.png",
+    "src": "./img/ico_flat_96.png",
     "sizes": "96x96",
     "type": "image/png"
   },
   {
-    "src": "./img/ico-4EverMore-128.png",
+    "src": "./img/ico_flat_128.png",
     "sizes": "128x128",
     "type": "image/png"
   },
   {
-    "src": "./img/ico-4EverMore-256.png",
+    "src": "./img/ico_flat_192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_256.png",
     "sizes": "256x256",
     "type": "image/png"
   },
   {
-    "src": "./img/ico-4EverMore-512.png",
+    "src": "./img/ico_flat_384.png",
+    "sizes": "384x384",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_512.png",
     "sizes": "512x512",
+    "type": "image/png"
+  },
+  {
+    "src": "./img/ico_flat_1024.png",
+    "sizes": "1024x1024",
     "type": "image/png"
   }]
 }
